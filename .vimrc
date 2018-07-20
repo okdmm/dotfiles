@@ -2,9 +2,14 @@
 """""""""""""""""""""""""""""""""""
 "file関連を無効
 filetype off
+
 if &compatible
  set nocompatible
 endif
+
+
+""""""""""""""""""""""""""""""""""""
+" dein dein dein dein dein
 
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/dotfiles/.vim/dein')
@@ -24,7 +29,7 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
   " プラグインリストを収めた TOML ファイル
-  " 予め TOML ファイル（後述）を用意しておく
+  " tomlファイルは .vim/rc にある
   let g:rc_dir    = expand('~/dotfiles/.vim/rc')
   let s:toml      = g:rc_dir . '/dein.toml'
   let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
@@ -38,6 +43,7 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
+" 自動チェック
 if dein#check_install()
   call dein#install()
 endif
@@ -46,11 +52,13 @@ endif
 filetype plugin indent on
 """"""""""""""""""""""""""""""
 
+
+
 """""""""""""""""""""""""""""""""""""
 "各種オプションの設定
 
+" colorshceme
 colorscheme hybrid
-"""""""""""""""""""""""""""""""""""""
 "vimscriptでマルチバイト設定。
 scriptencoding utf-8
 "クリップボードの設定
@@ -119,8 +127,12 @@ set whichwrap=b,s,h,l,<,>,[,]
 syntax on
 "crash予防
 set synmaxcol=200
-""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""
 
+
+
+"""""""""""""""""""""""""""""""""""""""""
+" util
 
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
@@ -128,35 +140,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 " grep検索の実行後にQuickFix Listを表示する
 autocmd QuickFixCmdPost *grep* cwindow
 
-""""""""""""""""""""""""""""""
-" Unite.vimの設定
-""""""""""""""""""""""""""""""
-"
-"" 入力モードで開始する
-"let g:unite_enable_start_insert=1
-"" バッファ一覧
-"noremap <C-P> :Unite buffer<CR>
-"" ファイル一覧
-"noremap <C-N> :Unite -buffer-name=file file<CR>
-"" 最近使ったファイルの一覧
-"noremap <C-Z> :Unite file_mru<CR>
-"" sourcesを「今開いているファイルのディレクトリ」とする
-"noremap :uff :<C-u>UniteWithBufferDir file -buffer-name=file<CR>
-"" ウィンドウを分割して開く
-"au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-"au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-"" ウィンドウを縦に分割して開く
-"au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-"au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-"" ESCキーを2回押すと終了する
-"au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
-"au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
-""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""
-
-
 " 挿入モード時、ステータスラインの色を変更
-""""""""""""""""""""""""""""""
 let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
 
 if has('syntax')
@@ -191,12 +175,12 @@ endfunction
 
 
 
-""""""""""""""""""""""""""""
-"key map
 """""""""""""""""""""""""""
+"key map
 
 "insertでのescをjjに
 inoremap <silent> jj <ESC>
+
 "折り返しじに表示行単位で移動
 nnoremap j gj
 nnoremap k gk
@@ -210,14 +194,13 @@ nnoremap <silent> ]B :blast<CR>
 " file検索を楽に アクティブバッファの相対パスの挿入を楽
 cnoremap <expr> %% getcmdtype() == ':'? expand('%:h').'/' : '%%'
 
-"""""""""""""""""""""""""""""""
 " 自動で閉じ括弧
-"""""""""""""""""""""""""""""
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 
 """"""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""
+
+
 "filetypeの検出
 filetype on
