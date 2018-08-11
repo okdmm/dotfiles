@@ -30,9 +30,3 @@ repo = 'nathanaelkane/vim-indent-guides'
 [[plugins]]
 repo = 'vim-scripts/AnsiEsc.vim'
 
-# 補完、スニペット
-[[plugins]]
-repo = 'Shougo/neocomplete.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet'

@@ -1,32 +1,24 @@
-"動をvi互換ではなくvimのデフォルトにする
-"""""""""""""""""""""""""""""""""""
-"file関連を無効
+" file関連を無効
 filetype off
 
-if &compatible
- set nocompatible
-endif
-
-
-""""""""""""""""""""""""""""""""""""
-" dein dein dein dein dein
-
-" プラグインが実際にインストールされるディレクトリ
-let s:dein_dir = expand('~/dotfiles/.vim/dein')
-" dein.vim 本体
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-
-" dein.vim がなければ github から落としてくる
-if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+" deinの設定
+let s:dein_dir = finddir('dein.vim', '.;')
+if s:dein_dir == '' || &runtimepath !~ '/dein.vim'
+  if s:dein_dir == '' && &runtimepath !~ '/dein.vim'
+    let s:dein_dir = expand('$HOME/.dein')
+                \. '/repos/github.com/Shougo/dein.vim'
+    if !isdirectory(s:dein_dir)
+      execute '!git clone https://github.com/Shougo/dein.vim' s:dein_dir
+    endif
   endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+  execute ' set runtimepath^=' . substitute(
+              \ fnamemodify(s:dein_dir, ':p'), '/$', '', '')
 endif
 
 " 設定開始
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
+let s:path = expand('$HOME/.dein')
+if dein#load_state(s:path)
+  call dein#begin(s:path)
 
   " プラグインリストを収めた TOML ファイル
   " tomlファイルは .vim/rc にある
@@ -59,6 +51,8 @@ filetype plugin indent on
 
 " colorshceme
 colorscheme hybrid
+"文字コードをutf-8に
+set encoding=utf-8
 "vimscriptでマルチバイト設定。
 scriptencoding utf-8
 "クリップボードの設定
@@ -75,8 +69,6 @@ set autoread
 set noswapfile
 "undofileはいらん
 set noundofile
-"文字コードをutf-8に
-set encoding=utf-8
 "保存じの文字コード
 set fileencoding=utf-8
 "□や●が崩れるのを防ぐ
@@ -133,7 +125,6 @@ set synmaxcol=200
 
 """""""""""""""""""""""""""""""""""""""""
 " util
-
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
 
@@ -180,11 +171,9 @@ endfunction
 
 "insertでのescをjjに
 inoremap <silent> jj <ESC>
-
-"折り返しじに表示行単位で移動
+" 折り返しじに表示行単位で移動
 nnoremap j gj
 nnoremap k gk
-
 "buffer移動を楽に
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
@@ -195,12 +184,16 @@ nnoremap <silent> ]B :blast<CR>
 cnoremap <expr> %% getcmdtype() == ':'? expand('%:h').'/' : '%%'
 
 " 自動で閉じ括弧
-imap { {}<LEFT>
-imap [ []<LEFT>
-imap ( ()<LEFT>
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
 
-""""""""""""""""""""""""""""""""
-
+" 閉じタグの自動ほかん
+augroup MyXML
+  autocmd!
+  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+augroup END
 
 "filetypeの検出
 filetype on
