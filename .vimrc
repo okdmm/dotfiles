@@ -22,7 +22,7 @@ if dein#load_state(s:path)
 
   " プラグインリストを収めた TOML ファイル
   " tomlファイルは .vim/rc にある
-  let g:rc_dir    = expand('~/dotfiles/.vim/rc')
+  let g:rc_dir    = expand('~/dotfiles/.vim/scripts/dein/')
   let s:toml      = g:rc_dir . '/dein.toml'
   let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
