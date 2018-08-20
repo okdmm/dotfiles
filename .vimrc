@@ -1,7 +1,12 @@
-" file関連を無効
 filetype off
 
-" deinの設定
+if &compatible
+ set nocompatible
+endif
+" Add the dein installation directory into runtimepath
+set encoding=utf-8
+set pyxversion=3
+" dein
 let s:dein_dir = finddir('dein.vim', '.;')
 if s:dein_dir == '' || &runtimepath !~ '/dein.vim'
   if s:dein_dir == '' && &runtimepath !~ '/dein.vim'
@@ -165,7 +170,6 @@ endfunction
 """"""""""""""""""""""""""""""
 
 
-
 """""""""""""""""""""""""""
 "key map
 
@@ -188,7 +192,7 @@ inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 
-" 閉じタグの自動ほかん
+" 閉じタグのほかん
 augroup MyXML
   autocmd!
   autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
