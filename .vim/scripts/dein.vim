@@ -35,7 +35,7 @@ endif
 call dein#begin(s:path)
 
 " toml!
-let g:rc_dir    = expand('~/dotfiles/.vim/scripts/dein/')
+let g:rc_dir    = expand('~/dotfiles/.vim/scripts/.dein/')
 let s:toml      = g:rc_dir . '/dein.toml'
 let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 

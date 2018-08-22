@@ -7,7 +7,6 @@ endif
 set encoding=utf-8
 source ~/dotfiles/.vim/scripts/dein.vim
 
-
 "option
 source ~/dotfiles/.vim/rc/options.vim
 
