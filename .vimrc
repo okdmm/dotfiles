@@ -1,3 +1,4 @@
+filetype off
 
 if &compatible
  set nocompatible
