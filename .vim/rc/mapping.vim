@@ -1,14 +1,24 @@
-"insertでのescをjjに
+" esc
 inoremap <silent> jj <ESC>
-" 折り返しじに表示行単位で移動
+vnoremap <C-j><C-j> <ESC>
+
 nnoremap j gj
 nnoremap k gk
-"buffer移動を楽に
+
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
+"window
+nnoremap s <Nop>
+nnoremap sp :<C-u>split<CR>
+nnoremap vs :<C-u>vsplit<CR>
+
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
 " file検索を楽に アクティブバッファの相対パスの挿入を楽
 cnoremap <expr> %% getcmdtype() == ':'? expand('%:h').'/' : '%%'
 
