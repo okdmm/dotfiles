@@ -2,13 +2,20 @@
 inoremap <silent> jj <ESC>
 vnoremap <C-j><C-j> <ESC>
 
+
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+" inoremap <C-h> <BS>
+inoremap <C-d> <Del>
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+inoremap <C-m> <CR>
+
 nnoremap j gj
 nnoremap k gk
 
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blast<CR>
+nnoremap <silent> <C-k> :bprevious<CR>
+nnoremap <silent> <C-j> :bnext<CR>
 
 "window
 nnoremap s <Nop>
@@ -26,10 +33,14 @@ cnoremap <expr> %% getcmdtype() == ':'? expand('%:h').'/' : '%%'
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+inoremap ` ``<LEFT>
 
 " 閉じタグのほかん
 augroup MyXML
   autocmd!
   autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype eruby inoremap <buffer> </ </<C-x><C-o>
 augroup END
