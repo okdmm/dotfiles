@@ -17,5 +17,4 @@ autocmd QuickFixCmdPost *grep* cwindow
 "key map
 source ~/dotfiles/.vim/rc/mapping.vim
 
-"filetypeの検出
 filetype plugin on

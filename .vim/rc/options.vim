@@ -1,8 +1,5 @@
-"option
 " colorshceme
 colorscheme hybrid
-"文字コードをutf-8に
-set encoding=utf-8
 "vimscriptでマルチバイト設定。
 scriptencoding utf-8
 "クリップボードの設定
@@ -69,4 +66,3 @@ set whichwrap=b,s,h,l,<,>,[,]
 syntax on
 "crash予防
 set synmaxcol=200
-"""""""""""""""""""""""""""""""""""""""""
