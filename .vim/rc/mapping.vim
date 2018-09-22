@@ -2,11 +2,8 @@
 inoremap <silent> jj <ESC>
 vnoremap <C-j><C-j> <ESC>
 
-
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
-" inoremap <C-h> <BS>
-inoremap <C-d> <Del>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-m> <CR>
