@@ -29,6 +29,10 @@ on_i = 1
 repo = 'mxw/vim-jsx'
 on_ft = ['javascript', 'javascript.jsx']
 
+[[plugins]]
+repo = 'jason0x43/vim-js-indent'
+on_ft = ['javascript', 'typescript']
+
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
