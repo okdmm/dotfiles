@@ -1,3 +1,5 @@
+"構文ごとに色を表示
+syntax on
 " colorshceme
 colorscheme hybrid
 "vimscriptでマルチバイト設定。
@@ -49,7 +51,7 @@ set listchars=tab:>\ ,extends:<
 "対応カッコやブレースを表示
 set showmatch
 "改行時に前のインデントを保持
-set autoindent
+"set autoindent
 "行番号の色
 highlight LineNr ctermfg=darkyellow
 "改行時にインデントをいい感じに
@@ -62,7 +64,5 @@ set shiftwidth=2
 set smarttab
 "カーソルを行頭、行末で止まらないようにする。
 set whichwrap=b,s,h,l,<,>,[,]
-"構文ごとに色を表示
-syntax on
 "crash予防
 set synmaxcol=200

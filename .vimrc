@@ -1,4 +1,5 @@
 filetype off
+filetype plugin indent off
 
 if &compatible
  set nocompatible
@@ -17,4 +18,4 @@ autocmd QuickFixCmdPost *grep* cwindow
 "key map
 source ~/dotfiles/.vim/rc/mapping.vim
 
-filetype plugin on
+filetype plugin indent on
