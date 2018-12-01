@@ -1,3 +1,4 @@
+# それはそう
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
@@ -63,9 +64,11 @@ let g:indent_guides_enable_on_vim_startup = 1
 [[plugins]]
 repo = 'vim-scripts/AnsiEsc.vim'
 
+# 自前で作ってる最中
 [[plugins]]
 repo = 'tpope/vim-surround'
 
+# あんま使わない説ある
 [[plugins]]
 repo = 'rhysd/accelerated-jk'
 on_map = {n = '<Plug>'}
@@ -74,5 +77,6 @@ hook_add = '''
   nmap <silent>k <Plug>(accelerated_jk_gk)
 '''
 
+# fzf 使うで
 [[plugins]]
 repo = 'junegunn/fzf.vim'

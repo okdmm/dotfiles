@@ -51,7 +51,7 @@ set listchars=tab:>\ ,extends:<
 "対応カッコやブレースを表示
 set showmatch
 "改行時に前のインデントを保持
-"set autoindent
+set autoindent
 "行番号の色
 highlight LineNr ctermfg=darkyellow
 "改行時にインデントをいい感じに
