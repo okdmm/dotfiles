@@ -24,6 +24,8 @@ set fileencoding=utf-8
 set ambiwidth=double
 "カーソルの位置表示
 set ruler
+" カーソルを相対位置で表示"
+set relativenumber
 "comandlineに表示される画面上の行すう
 set cmdheight=2
 "statuslineを末尾に行目から常に表示
