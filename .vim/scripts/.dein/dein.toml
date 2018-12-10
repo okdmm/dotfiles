@@ -18,6 +18,15 @@ hook_post_update = '''
   let g:dein#plugin.build = cmd
 '''
 
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
 #ステータスバーを素敵に
 [[plugins]]
 repo = 'itchyny/lightline.vim'
