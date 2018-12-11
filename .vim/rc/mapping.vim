@@ -26,19 +26,9 @@ nnoremap <silent> <C-k> :bprevious<CR>
 nnoremap <silent> <C-j> :bnext<CR>
 
 "window
-nnoremap s <Nop>
 nnoremap sp :<C-u>split<CR>
 nnoremap vs :<C-u>vsplit<CR>
 
-nnoremap sj <C-w>j
-nnoremap sk <C-w>k
-nnoremap sl <C-w>l
-nnoremap sh <C-w>h
-nnoremap s= <C-w>=
-nnoremap s> <C-w>>
-nnoremap s< <C-w><
-nnoremap s+ <C-w>+
-nnoremap s- <C-w>-
 " file検索を楽に アクティブバッファの相対パスの挿入を楽
 cnoremap <expr> %% getcmdtype() == ':'? expand('%:h').'/' : '%%'
 
