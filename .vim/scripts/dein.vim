@@ -51,4 +51,5 @@ if dein#check_install()
 endif
 
 " Required:
+syntax enable
 filetype plugin indent on

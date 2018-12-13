@@ -1,3 +1,5 @@
+" encofing utg-8
+set encoding=utf-8
 "構文ごとに色を表示
 syntax on
 " colorshceme
