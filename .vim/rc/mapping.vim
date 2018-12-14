@@ -8,11 +8,14 @@ inoremap <C-a> <Home>
 inoremap <C-e> <End>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
-inoremap <C-m> <CR>
 
 " 
 nnoremap j gj
 nnoremap k gk
+
+" indent
+nnoremap > >>
+nnoremap < <<
 
 " Better x
 nnoremap x "_x
