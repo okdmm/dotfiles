@@ -17,8 +17,12 @@ nnoremap j gj
 nnoremap k gk
 
 " indent
-""nnoremap > >>
-""nnoremap < <<
+nnoremap > >>
+nnoremap < <<
+
+" reyank
+nnoremap <Leader>p "0p
+vnoremap <Leader>p "0p
 
 " Better x
 nnoremap x "_x
