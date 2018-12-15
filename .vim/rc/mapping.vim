@@ -1,3 +1,6 @@
+" leader key
+let mapleader = "\<Space>"
+
 " escape
 inoremap <silent> jj <ESC>
 vnoremap <C-j><C-j> <ESC>
@@ -14,8 +17,8 @@ nnoremap j gj
 nnoremap k gk
 
 " indent
-nnoremap > >>
-nnoremap < <<
+""nnoremap > >>
+""nnoremap < <<
 
 " Better x
 nnoremap x "_x
