@@ -13,6 +13,7 @@ endif
 
 " Add the dein installation directory into runtimepath
 set pyxversion=3
+set encoding=utf-8
 let s:dein_dir = finddir('dein.vim', '.;')
 if s:dein_dir == '' || &runtimepath !~ '/dein.vim'
   if s:dein_dir == '' && &runtimepath !~ '/dein.vim'
@@ -51,5 +52,5 @@ if dein#check_install()
 endif
 
 " Required:
-syntax enable
 filetype plugin indent on
+syntax on

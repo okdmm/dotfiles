@@ -1,13 +1,15 @@
-" encofing utg-8
+" encofing utf-8
 set encoding=utf-8
-"構文ごとに色を表示
-syntax on
+"syntax
+syntax sync minlines=256
 " colorshceme
 colorscheme hybrid
 "vimscriptでマルチバイト設定。
 scriptencoding utf-8
-"クリップボードの設定
+"クリップボードの設定 mac kuso
 set clipboard+=unnamed
+"改行時にインデントをいい感じに
+set smartindent
 "行の表示
 set number
 "行末の一文字先までカーソルを移動できるように
@@ -58,8 +60,6 @@ set showmatch
 set autoindent
 "行番号の色
 highlight LineNr ctermfg=darkyellow
-"改行時にインデントをいい感じに
-set smartindent
 "tabの間隔
 set tabstop=2
 "vimが挿入するインデントの幅

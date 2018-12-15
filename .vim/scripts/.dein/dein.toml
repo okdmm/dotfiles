@@ -89,3 +89,4 @@ hook_add = '''
 # fzf 使うで
 [[plugins]]
 repo = 'junegunn/fzf.vim'
+
