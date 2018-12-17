@@ -8,6 +8,10 @@ on_i = 1
 repo = 'roxma/nvim-yarp'
 on_i = 1
 
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
+
 # Rubyの自動補完
 [[plugins]]
 repo = 'Shougo/deoplete-rct'
