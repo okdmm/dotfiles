@@ -12,6 +12,10 @@ set clipboard+=unnamed
 set smartindent
 "行の表示
 set number
+"今さらだけどミュート
+set t_vb=
+set visualbell
+set noerrorbells
 "行末の一文字先までカーソルを移動できるように
 set cursorline
 "バッファが編集でも別ファイルを開けるように
