@@ -1,6 +1,7 @@
 " encofing utf-8
 set encoding=utf-8
 "syntax
+syntax on
 syntax sync minlines=256
 " colorshceme
 colorscheme hybrid
