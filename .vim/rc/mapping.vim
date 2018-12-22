@@ -114,6 +114,9 @@ inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap ` ``<LEFT>
 
+" 自動で改行
+inoremap <Leader>{ {}<LEFT><CR><C-o>O
+
 " 閉じタグのほかん
 augroup MyXML
   autocmd!
