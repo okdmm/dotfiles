@@ -107,15 +107,15 @@ nnoremap va7 va'
 nnoremap va@ va`
 
 " 自動で閉じる
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-inoremap ` ``<LEFT>
+inoremap {<Leader> {}<LEFT>
+inoremap [<Leader> []<LEFT>
+inoremap (<Leader> ()<LEFT>
+inoremap "<Leader> ""<LEFT>
+inoremap '<Leader> ''<LEFT>
+inoremap `<Leader> ``<LEFT>
 
 " 自動で改行
-inoremap <Leader>{ {}<LEFT><CR><C-o>O
+imap {<CR> {}<LEFT><CR><C-o>O
 
 " 閉じタグのほかん
 augroup MyXML
