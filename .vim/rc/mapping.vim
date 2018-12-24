@@ -20,6 +20,9 @@ nnoremap k gk
 nnoremap > >>
 nnoremap < <<
 
+" Act like D and C
+nnoremap Y y$
+
 " reyank
 nnoremap <Leader>p "0p
 vnoremap <Leader>p "0p
@@ -32,9 +35,14 @@ cnoremap <C-n> <Down>
 " <C-p>: previous history;
 cnoremap <C-p> <Up>
 
+" 検索後カーソル位置を中心に
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
 "quickfix
 nnoremap <Leader>a :cclose<CR>
 
+" buffer移動
 nnoremap <silent> <C-k> :bprevious<CR>
 nnoremap <silent> <C-j> :bnext<CR>
 
@@ -106,7 +114,7 @@ nnoremap va2 va"
 nnoremap va7 va'
 nnoremap va@ va`
 
-" 自動で閉じる
+" 自動で閉じる Leaderで閉じるようにしました
 inoremap {<Leader> {}<LEFT>
 inoremap [<Leader> []<LEFT>
 inoremap (<Leader> ()<LEFT>
@@ -114,7 +122,7 @@ inoremap "<Leader> ""<LEFT>
 inoremap '<Leader> ''<LEFT>
 inoremap `<Leader> ``<LEFT>
 
-" 自動で改行
+" 内に自動で改行
 imap {<CR> {}<LEFT><CR><C-o>O
 
 " 閉じタグのほかん

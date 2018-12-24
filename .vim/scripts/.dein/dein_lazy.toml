@@ -13,6 +13,8 @@ repo = 'fatih/vim-go'
 on_ft = ['go']
 hook_source = '''
   let g:go_bin_path = expand("~/go/bin")
+
+  " goimports をfmtと同時に めちゃ便利じゃね
   let g:go_fmt_command = "goimports"
   autocmd Filetype go nmap <Leader>r <Plug>(go-run)
   autocmd Filetype go nmap <Leader>t <Plug>(go-test)
