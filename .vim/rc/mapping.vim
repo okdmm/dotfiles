@@ -118,12 +118,13 @@ nnoremap va@ va`
 inoremap {<Leader> {}<LEFT>
 inoremap [<Leader> []<LEFT>
 inoremap (<Leader> ()<LEFT>
-inoremap "<Leader> ""<LEFT>
-inoremap '<Leader> ''<LEFT>
-inoremap `<Leader> ``<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+inoremap ` ``<LEFT>
 
 " 内に自動で改行
 imap {<CR> {}<LEFT><CR><C-o>O
+imap (<CR> ()<LEFT><CR><C-o>O
 
 " 閉じタグのほかん
 augroup MyXML
