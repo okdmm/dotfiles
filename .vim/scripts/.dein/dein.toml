@@ -19,10 +19,22 @@ hook_post_update = '''
 '''
 
 [[plugins]]
-repo = 'cespare/vim-toml'
+repo = 'prabirshrestha/async.vim'
 
 [[plugins]]
-repo = 'rcmdnk/vim-markdown'
+repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+let g:lsp_async_completion = 1
+'''
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+[[plugins]]
+repo = 'natebosch/vim-lsc'
 
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'

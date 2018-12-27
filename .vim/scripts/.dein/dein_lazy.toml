@@ -81,6 +81,14 @@ hook_source = '''
 '''
 on_i = 1
 
+
 [[plugins]]
 repo = 'vim-jp/vital.vim'
 
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+on_ft = ['md']

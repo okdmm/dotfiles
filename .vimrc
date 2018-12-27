@@ -8,6 +8,9 @@ source ~/dotfiles/.vim/scripts/dein.vim
 "option
 source ~/dotfiles/.vim/rc/options.vim
 
+"filetype
+source ~/dotfiles/.vim/rc/ft.vim
+
 " util
 
 " grep検索の実行後にQuickFix Listを表示する
