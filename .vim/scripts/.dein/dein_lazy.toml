@@ -13,6 +13,12 @@ repo = 'fatih/vim-go'
 on_ft = ['go']
 hook_source = '''
   let g:go_bin_path = expand("~/go/bin")
+  let g:go_highlight_types = 1
+  let g:go_highlight_fields = 1
+  let g:go_highlight_functions = 1
+  let g:go_highlight_function_calls = 1
+  let g:go_highlight_operators = 1
+  let g:go_highlight_extra_types = 1
 
   " goimports をfmtと同時に めちゃ便利じゃね
   let g:go_fmt_command = "goimports"
