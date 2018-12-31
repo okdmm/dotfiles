@@ -89,6 +89,9 @@ repo = 'vim-scripts/AnsiEsc.vim'
 [[plugins]]
 repo = 'tpope/vim-surround'
 
+[[plugins]]
+repo = 'tpope/vim-repeat'
+
 # あんま使わない説ある
 [[plugins]]
 repo = 'rhysd/accelerated-jk'
@@ -100,5 +103,22 @@ hook_add = '''
 
 # fzf 使うで
 [[plugins]]
-repo = 'junegunn/fzf.vim'
+repo = '/usr/local/opt/fzf'
 
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+hook_add = '''
+  nmap <C-p> :Files<CR>
+'''
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+hook_add = '''
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
+'''
+
+[[plugins]]
+repo = "tpope/vim-fugitive"

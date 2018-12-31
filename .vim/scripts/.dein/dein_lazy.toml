@@ -91,4 +91,4 @@ on_ft = ['toml']
 
 [[plugins]]
 repo = 'rcmdnk/vim-markdown'
-on_ft = ['md']
+on_ft = ['markdown']
