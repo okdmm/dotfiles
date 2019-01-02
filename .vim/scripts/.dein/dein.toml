@@ -18,14 +18,12 @@ hook_post_update = '''
   let g:dein#plugin.build = cmd
 '''
 
+# vim-lsp setting
 [[plugins]]
 repo = 'prabirshrestha/async.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
-hook_add = '''
-let g:lsp_async_completion = 1
-'''
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
@@ -35,6 +33,9 @@ repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
 [[plugins]]
 repo = 'natebosch/vim-lsc'
+hook_add = '''
+let g:lsp_async_completion = 1
+'''
 
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'
