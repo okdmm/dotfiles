@@ -114,17 +114,25 @@ nnoremap va2 va"
 nnoremap va7 va'
 nnoremap va@ va`
 
-" 自動で閉じる Leaderで閉じるようにしました
-inoremap {<Leader> {}<LEFT>
-inoremap [<Leader> []<LEFT>
-inoremap (<Leader> ()<LEFT>
+" 自動で閉じる
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap ` ``<LEFT>
+" <Leader>で閉じない
+inoremap {<Leader>  {
+inoremap [<Leader>  [
+inoremap (<Leader>  (
+inoremap "<Leader>  "
+inoremap '<Leader>  '
+inoremap `<Leader>  `
 
 " 内に自動で改行
-imap {<CR> {}<LEFT><CR><C-o>O
-imap (<CR> ()<LEFT><CR><C-o>O
+inoremap {<CR> {}<LEFT><CR><C-o>O
+inoremap (<CR> ()<LEFT><CR><C-o>O
+inoremap [<CR> []<LEFT><CR><C-o>O
 
 " 閉じタグのほかん
 augroup MyXML
