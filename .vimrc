@@ -20,4 +20,3 @@ autocmd QuickFixCmdPost *grep* cwindow
 source ~/dotfiles/.vim/rc/mapping.vim
 
 filetype plugin indent on
-set runtimepath+=~/workspace/vim-amake

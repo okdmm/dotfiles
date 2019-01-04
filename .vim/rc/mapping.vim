@@ -53,7 +53,7 @@ nnoremap vs :<C-u>vsplit<CR>
 " file検索を楽に アクティブバッファの相対パスの挿入を楽
 cnoremap <expr> %% getcmdtype() == ':'? expand('%:h').'/' : '%%'
 
-" text object を便利に
+" text object を便利に 多分キーボード自体のmappingを変えルカも
 " cut
 nnoremap c8 ci(
 nnoremap c[ ci[
