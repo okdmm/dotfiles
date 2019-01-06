@@ -32,14 +32,17 @@ nnoremap x "_x
 
 " <C-n>: next history.
 cnoremap <C-n> <Down>
-" <C-p>: previous history;
+" <C-p>: previous history.
 cnoremap <C-p> <Up>
 
 " 検索後カーソル位置を中心に
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-"quickfix
+" :noh
+nnoremap <silent> <C-l> :<C-u>noh<CR><C-l>
+
+" quickfix閉じる
 nnoremap <Leader>a :cclose<CR>
 
 " buffer移動
