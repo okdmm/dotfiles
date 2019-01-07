@@ -12,6 +12,7 @@ source ~/dotfiles/.vim/rc/options.vim
 source ~/dotfiles/.vim/rc/ft.vim
 
 " util
+source ~/dotfiles/.vim/rc/util.vim
 
 " grep検索の実行後にQuickFix Listを表示する
 autocmd QuickFixCmdPost *grep* cwindow
