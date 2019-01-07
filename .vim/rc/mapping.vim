@@ -1,5 +1,6 @@
 " leader key
 let mapleader = "\<Space>"
+let maplocalleader = ','
 
 " escape
 inoremap <silent> jj <ESC>
@@ -146,3 +147,8 @@ augroup MyXML
   autocmd Filetype php inoremap <buffer> </ </<C-x><C-o>
 augroup END
 
+" すでにterminalが開かれていたらそれを開く
+nnoremap <silent> <LocalLeader>t :call TermOpen()<CR>
+
+" 保存
+nnoremap <silent> <Leader>w :w<CR>
