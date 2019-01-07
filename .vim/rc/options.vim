@@ -75,3 +75,5 @@ set smarttab
 set whichwrap=b,s,h,l,<,>,[,]
 "crash予防
 set synmaxcol=200
+" terminalの縦幅狭く
+set termwinsize=15x0
