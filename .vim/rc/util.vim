@@ -1,5 +1,6 @@
 " すでにterminalが開かれていたらそれを開く
 function! TermOpen() abort
+  set sb
   if empty(term_list())
     execute "terminal"
   else 
@@ -12,4 +13,5 @@ function! TermOpen() abort
       call win_gotoid(win_findbuf(term_list()[0])[0])
     endif
   endif
+  set nosb
 endfunction
