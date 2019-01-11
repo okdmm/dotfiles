@@ -50,9 +50,11 @@ nnoremap <Leader>a :cclose<CR>
 nnoremap <silent> <C-k> :bprevious<CR>
 nnoremap <silent> <C-j> :bnext<CR>
 
-"window
+" easily split vsplit
+nnoremap s <Nop>
 nnoremap sp :<C-u>split<CR>
 nnoremap vs :<C-u>vsplit<CR>
+
 
 " file検索を楽に アクティブバッファの相対パスの挿入を楽
 cnoremap <expr> %% getcmdtype() == ':'? expand('%:h').'/' : '%%'
@@ -147,8 +149,12 @@ augroup MyXML
   autocmd Filetype php inoremap <buffer> </ </<C-x><C-o>
 augroup END
 
-" すでにterminalが開かれていたらそれを開く
+" terminalを便利に開く
 nnoremap <silent> <LocalLeader>t :call TermOpen()<CR>
 
 " 保存
-nnoremap <silent> <Leader>w :w<CR>
+nnoremap <silent> <Leader>w :<C-u>w<CR>
+" :source $MYVIMRC
+nnoremap <silent> <Leader>vl :<C-u>source $MYVIMRC<CR>
+" :edit $MYVIMRC
+nnoremap <silent> <Leader>ve :<C-u>edit $MYVIMRC<CR>
