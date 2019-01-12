@@ -19,3 +19,12 @@ function! TermOpen() abort
   " set nosplitbelow
   set nosb
 endfunction
+
+" terminalを閉じる
+function! TermClose() abort
+  if !empty(term_list())
+    let buf = term_list()[0]
+    call term_sendkeys(buf,"exit\<CR>")
+  endif
+endfunction
+
