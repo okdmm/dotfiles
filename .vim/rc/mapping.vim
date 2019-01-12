@@ -151,6 +151,7 @@ augroup END
 
 " terminalを便利に開く
 nnoremap <silent> <LocalLeader>t :call TermOpen()<CR>
+nnoremap <silent> <LocalLeader>q :call TermClose()<CR>
 
 " 保存
 nnoremap <silent> <Leader>w :<C-u>w<CR>
