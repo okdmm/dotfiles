@@ -8,10 +8,10 @@ function! TermOpen() abort
     " 現在のwindow内に開かれてるか確認
     if empty(win_findbuf(term_list()[0]))
       " もしなければ現在のbufferから水平分割して開く
-      let number = term_list()[0]
+      let bufnumber = term_list()[0]
       " sb means splitbuffer
-      execute "sb" . number
-      call term_setsize(number, 18, 0)
+      execute "sb" . bufnumber
+      call term_setsize(bufnumber, 18, 0)
     else
       " windowないの開かれているterminalにフォーカス
       call win_gotoid(win_findbuf(term_list()[0])[0])
@@ -22,11 +22,17 @@ function! TermOpen() abort
 endfunction
 
 " terminalを閉じる
-function! TermClose() abort
+"function! TermClose() abort
+"  if !empty(term_list())
+"    call win_gotoid(win_findbuf(term_list()[0])[0])
+"    " execute "wincmd" . "c" ."\<CR>"
+"  endif
+"endfunction
+
+function! TermKill() abort
   if !empty(term_list())
     let bufnumber = term_list()[0]
     execute "bd!" . bufnumber
     "call term_sendkeys(buf,"exit\<CR>")
   endif
 endfunction
-

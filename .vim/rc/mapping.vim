@@ -1,6 +1,6 @@
 " leader key
 let mapleader = "\<Space>"
-let maplocalleader = ','
+let maplocalleader = ","
 
 " escape
 inoremap <silent> jj <ESC>
@@ -150,10 +150,10 @@ augroup MyXML
 augroup END
 
 " terminalを便利に開く
-nnoremap <silent> <LocalLeader>t :call TermOpen()<CR>
-nnoremap <silent> <LocalLeader>q :call TermClose()<CR>
+nnoremap <silent> <LocalLeader>t :<C-u>call TermOpen()<CR>
+nnoremap <silent> <LocalLeader>q :<C-u>call TermKill()<CR>
 
-" 保存
+" :write
 nnoremap <silent> <Leader>w :<C-u>w<CR>
 " :source $MYVIMRC
 nnoremap <silent> <Leader>vl :<C-u>source $MYVIMRC<CR>
