@@ -11,6 +11,7 @@ function! TermOpen() abort
       let number = term_list()[0]
       " sb means splitbuffer
       execute "sb" . number
+      call term_setsize(number, 18, 0)
     else
       " windowないの開かれているterminalにフォーカス
       call win_gotoid(win_findbuf(term_list()[0])[0])
