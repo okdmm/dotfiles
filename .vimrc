@@ -2,6 +2,8 @@ if &compatible
   set nocompatible
 endif
 
+filetype plugin indent on
+
 "dein
 source ~/dotfiles/.vim/scripts/dein.vim
 
@@ -14,10 +16,6 @@ source ~/dotfiles/.vim/rc/ft.vim
 " util
 source ~/dotfiles/.vim/rc/util.vim
 
-" grep検索の実行後にQuickFix Listを表示する
-autocmd QuickFixCmdPost *grep* cwindow
-
 "key map
 source ~/dotfiles/.vim/rc/mapping.vim
 
-filetype plugin indent on

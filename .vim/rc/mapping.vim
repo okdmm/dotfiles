@@ -149,7 +149,7 @@ augroup MyXML
   autocmd Filetype php inoremap <buffer> </ </<C-x><C-o>
 augroup END
 
-" terminalを便利に開く
+" terminalを便利に
 nnoremap <silent> <LocalLeader>t :<C-u>call TermOpen()<CR>
 nnoremap <silent> <LocalLeader>q :<C-u>call TermKill()<CR>
 
@@ -159,3 +159,4 @@ nnoremap <silent> <Leader>w :<C-u>w<CR>
 nnoremap <silent> <Leader>vl :<C-u>source $MYVIMRC<CR>
 " :edit $MYVIMRC
 nnoremap <silent> <Leader>ve :<C-u>edit $MYVIMRC<CR>
+

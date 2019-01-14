@@ -36,3 +36,6 @@ function! TermKill() abort
     "call term_sendkeys(buf,"exit\<CR>")
   endif
 endfunction
+
+" grep検索の実行後にQuickFix Listを表示する
+autocmd QuickFixCmdPost *grep* cwindow

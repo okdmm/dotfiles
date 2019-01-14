@@ -12,11 +12,11 @@ autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 "   augroup END
 " endif
 
-if executable('go-langserver')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'go-langserver',
-        \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
-        \ 'whitelist': ['go'],
-        \ })
-endif
+"if executable('go-langserver')
+"    au User lsp_setup call lsp#register_server({
+"        \ 'name': 'go-langserver',
+"        \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
+"        \ 'whitelist': ['go'],
+"        \ })
+"endif
 

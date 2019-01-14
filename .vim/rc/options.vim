@@ -1,3 +1,4 @@
+filetype plugin indent on
 " encofing utf-8
 set encoding=utf-8
 "syntax
@@ -7,7 +8,7 @@ syntax sync minlines=256
 colorscheme hybrid
 "vimscriptでマルチバイト設定。
 scriptencoding utf-8
-"クリップボードの設定 mac kuso
+"クリップボードの設定
 set clipboard+=unnamed
 "改行時にインデントをいい感じに
 set smartindent
