@@ -2,10 +2,9 @@ if &compatible
   set nocompatible
 endif
 
-filetype plugin indent on
-
 "dein
 source ~/dotfiles/.vim/scripts/dein.vim
+
 
 "option
 source ~/dotfiles/.vim/rc/options.vim

@@ -101,6 +101,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'mileszs/ack.vim'
+
+[[plugins]]
 repo = "airblade/vim-gitgutter"
 hook_add = '''
 let g:gitgutter_sign_added = '∙'
