@@ -43,12 +43,18 @@ nnoremap N Nzzzv
 " :noh
 nnoremap <silent> <C-l> :<C-u>noh<CR><C-l>
 
-" quickfix閉じる
+" quicfix
 nnoremap <Leader>a :cclose<CR>
+nnoremap <silent> [q :cprevious<CR>zz
+nnoremap <silent> ]q :cnext<CR>zz
+nnoremap <silent> [Q :<C-u>cfirst<CR>zz
+nnoremap <silent> Q] :<C-u>clast<CR>zz
 
-" buffer移動
-nnoremap <silent> <C-k> :bprevious<CR>
-nnoremap <silent> <C-j> :bnext<CR>
+" buffer
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
 
 " easily split vsplit
 nnoremap s <Nop>
