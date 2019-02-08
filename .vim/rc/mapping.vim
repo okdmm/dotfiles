@@ -134,12 +134,12 @@ inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap ` ``<LEFT>
 " <Leader>で閉じない
-inoremap {<Leader>  {
-inoremap [<Leader>  [
-inoremap (<Leader>  (
-inoremap "<Leader>  "
-inoremap '<Leader>  '
-inoremap `<Leader>  `
+inoremap {<LocalLeader>  {
+inoremap [<LocalLeader>  [
+inoremap (<LocalLeader>  (
+inoremap "<LocalLeader>  "
+inoremap '<LocalLeader>  '
+inoremap `<LocalLeader>  `
 
 " 内に自動で改行
 inoremap {<CR> {}<LEFT><CR><C-o>O
