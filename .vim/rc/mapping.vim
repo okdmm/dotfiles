@@ -141,6 +141,7 @@ inoremap "<LocalLeader>  "
 inoremap '<LocalLeader>  '
 inoremap `<LocalLeader>  `
 
+
 " 内に自動で改行
 inoremap {<CR> {}<LEFT><CR><C-o>O
 inoremap (<CR> ()<LEFT><CR><C-o>O
