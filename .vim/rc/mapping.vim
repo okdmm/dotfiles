@@ -65,66 +65,6 @@ nnoremap vs :<C-u>vsplit<CR>
 " file検索を楽に アクティブバッファの相対パスの挿入を楽
 cnoremap <expr> %% getcmdtype() == ':'? expand('%:h').'/' : '%%'
 
-" text object を便利に 多分キーボード自体のmappingを変えルカも
-" cut
-nnoremap c8 ci(
-nnoremap c[ ci[
-nnoremap c{ ci{
-nnoremap c2 ci"
-nnoremap c7 ci'
-nnoremap c@ ci`
-
-nnoremap ca8 ca(
-nnoremap ca[ ca[
-nnoremap ca{ ca{
-nnoremap ca2 ca"
-nnoremap ca7 ca'
-nnoremap ca@ ca`
-
-" delete
-nnoremap d8 di(
-nnoremap d[ di[
-nnoremap d{ di{
-nnoremap d2 di"
-nnoremap d7 di'
-nnoremap d@ di`
-
-nnoremap da8 da(
-nnoremap da[ da[
-nnoremap da{ da{
-nnoremap da2 da"
-nnoremap da7 da'
-nnoremap da@ da`
-
-" yank
-nnoremap y8 yi(
-nnoremap y[ yi[
-nnoremap y{ yi{
-nnoremap y2 yi"
-nnoremap y7 yi'
-nnoremap y@ yi`
-
-nnoremap ya8 ya(
-nnoremap ya[ ya[
-nnoremap ya{ ya{
-nnoremap ya2 ya"
-nnoremap ya7 ya'
-nnoremap ya@ ya`
-
-" visual
-nnoremap v8 vi(
-nnoremap v[ vi[
-nnoremap v{ vi{
-nnoremap v2 vi"
-nnoremap v7 vi'
-nnoremap v@ vi`
-
-nnoremap va8 va(
-nnoremap va[ va[
-nnoremap va{ va{
-nnoremap va2 va"
-nnoremap va7 va'
-nnoremap va@ va`
 
 " 自動で閉じる
 inoremap { {}<LEFT>
@@ -133,7 +73,7 @@ inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap ` ``<LEFT>
-" <Leader>で閉じない
+" <LocalLeader>で閉じない
 inoremap {<LocalLeader>  {
 inoremap [<LocalLeader>  [
 inoremap (<LocalLeader>  (
