@@ -95,3 +95,25 @@ on_ft = ['toml']
 [[plugins]]
 repo = 'rcmdnk/vim-markdown'
 on_ft = ['markdown']
+
+
+[[plugins]]
+repo = 'tyru/eskk.vim'
+on_map = {ic = '<Plug>'}
+hook_add = '''
+  imap <C-j>     <Plug>(eskk:toggle)
+  cmap <C-j>     <Plug>(eskk:toggle)
+'''
+hook_source = '''
+  let g:eskk#directory = "~/.eskk"
+  let g:eskk#dictionary = {
+        \   'path': expand('~/Library/Application Support/AquaSKK/skk-jisyo'),
+        \   'sorted': 0,
+        \   'encoding': 'utf-8',
+        \}
+  let g:eskk#large_dictionary = {
+        \   'path': '~/Library/Application Support/AquaSKK/SKK-JISYO.L',
+        \   'sorted': 1,
+        \   'encoding': 'euc-jp',
+        \}
+'''
