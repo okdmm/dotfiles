@@ -1,3 +1,5 @@
 .DS_Store
 .zsh/history/
 .netrwhist
+.tmux/plugins/
+.tmux/resurrect/
