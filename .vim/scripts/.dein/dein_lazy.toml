@@ -107,12 +107,12 @@ hook_add = '''
 hook_source = '''
   let g:eskk#directory = "~/.eskk"
   let g:eskk#dictionary = {
-        \   'path': expand('~/Library/Application Support/AquaSKK/skk-jisyo'),
+        \   'path': expand('~/Dropbox/myskk/skk-jisyo.utf8'),
         \   'sorted': 0,
         \   'encoding': 'utf-8',
         \}
   let g:eskk#large_dictionary = {
-        \   'path': '~/Library/Application Support/AquaSKK/SKK-JISYO.L',
+        \   'path': '~/Dropbox/myskk/SKK-JISYO.L',
         \   'sorted': 1,
         \   'encoding': 'euc-jp',
         \}
