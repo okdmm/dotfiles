@@ -102,7 +102,7 @@ nnoremap <silent> <LocalLeader>t :<C-u>call TermOpen()<CR>
 nnoremap <silent> <LocalLeader>q :<C-u>call TermKill()<CR>
 
 " :write
-nnoremap <silent> <Leader>-w :<C-u>w<CR>
+nnoremap <silent> <Leader>w :<C-u>w<CR>
 " :source $MYVIMRC
 nnoremap <silent> <Leader>vl :<C-u>source $MYVIMRC<CR>
 " :edit $MYVIMRC
