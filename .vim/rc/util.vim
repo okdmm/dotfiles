@@ -39,3 +39,10 @@ endfunction
 
 " grep検索の実行後にQuickFix Listを表示する
 autocmd QuickFixCmdPost *grep* cwindow
+
+
+" grepでriggrepを使う 
+if executable('rg')
+    let &grepprg = 'rg --vimgrep --hidden'
+    set grepformat=%f:%l:%c:%m
+endif

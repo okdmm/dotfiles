@@ -117,3 +117,7 @@ hook_source = '''
         \   'encoding': 'euc-jp',
         \}
 '''
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = ['html']
