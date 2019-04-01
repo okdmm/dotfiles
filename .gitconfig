@@ -1,0 +1,18 @@
+[core]
+	excludesfile = /Users/okd/.gitignore_global
+  editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[user]
+	name = okada
+	email = kirinnremonn1122@gmail.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[commit]
+	template = /Users/okd/.stCommitMsg
+[ghq]
+	root = /Users/okd/dev/src
