@@ -56,7 +56,6 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "b4b4r07/zsh-gomi", if:"which fzf"
-# install plugins
 zplug "peco/peco", as:command, from:gh-r
 zplug "mollifier/anyframe"
 
@@ -73,10 +72,23 @@ zplug load --verbose
 # rbenv 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-# GOPATH
+# GO
 export GOPATH=$HOME/dev
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+# openssl
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+# nodebrew
+export PATH=$PATH:/Users/okd/.nodebrew/current/bin
+# imagemagick@6
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+# pyenv
+export PYENV_ROOT=~/.pyenv
+export PATH=$PATH:$PYENV_ROOT/bin
+export PATH="$HOME/.pyenv/shims:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 
 # cdとlsを連結
 chpwd() { ls -ltrG }
@@ -85,10 +97,6 @@ chpwd() { ls -ltrG }
 autoload -U promptinit; promptinit
 prompt pure
 
-# openssl
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-# nodebrew
-export PATH=$PATH:/Users/okd/.nodebrew/current/bin
 
 
 # tmux auto attach
