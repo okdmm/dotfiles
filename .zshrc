@@ -68,7 +68,6 @@ if ! zplug check --verbose; then
 fi
 zplug load --verbose
 
-
 # rbenv 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
