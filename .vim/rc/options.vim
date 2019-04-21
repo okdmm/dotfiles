@@ -1,6 +1,7 @@
 filetype plugin indent on
 " encofing utf-8
 set encoding=utf-8
+set fileencodings=utf-8,sjis,euc-jp,latin1
 "syntax
 syntax on
 syntax sync minlines=256

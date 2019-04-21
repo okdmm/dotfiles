@@ -102,26 +102,5 @@ let g:vim_markdown_new_list_item_indent = 0
 '''
 
 [[plugins]]
-repo = 'tyru/eskk.vim'
-on_map = {ic = '<Plug>'}
-hook_add = '''
-  imap <C-j>     <Plug>(eskk:toggle)
-  cmap <C-j>     <Plug>(eskk:toggle)
-'''
-hook_source = '''
-  let g:eskk#directory = "~/.eskk"
-  let g:eskk#dictionary = {
-        \   'path': expand('~/Dropbox/myskk/skk-jisyo.utf8'),
-        \   'sorted': 0,
-        \   'encoding': 'utf-8',
-        \}
-  let g:eskk#large_dictionary = {
-        \   'path': '~/Dropbox/myskk/SKK-JISYO.L',
-        \   'sorted': 1,
-        \   'encoding': 'euc-jp',
-        \}
-'''
-
-[[plugins]]
 repo = 'mattn/emmet-vim'
 on_ft = ['html']
