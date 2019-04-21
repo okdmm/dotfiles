@@ -43,6 +43,7 @@ setopt hist_save_no_dups
 setopt hist_expire_dups_first
 setopt hist_expand
 setopt inc_append_history
+setopt no_flow_control
 
 # zplug
 if [ ! -e "${HOME}/.zplug/init.zsh" ]; then

@@ -29,8 +29,6 @@ set autoread
 set noswapfile
 "undofileはいらん
 set noundofile
-"保存じの文字コード
-set fileencoding=utf-8
 "□や●が崩れるのを防ぐ
 set ambiwidth=double
 "カーソルの位置表示
