@@ -45,7 +45,7 @@ repo = 'vim-jp/vimdoc-ja'
 repo = 'itchyny/lightline.vim'
 hook_add = '''
 let g:lightline = {
-\ 'colorscheme': 'wombat',
+\ 'colorscheme': 'iceberg',
 \ 'active': {
 \   'left': [['mode', 'paste'], ['filename', 'modified']],
 \   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
@@ -122,4 +122,10 @@ hook_add = '''
   let twitvim_browser_cmd = 'open' 
   let twitvim_force_ssl = 1 
   let twitvim_count = 40
+'''
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = '''
+	colorscheme iceberg
 '''

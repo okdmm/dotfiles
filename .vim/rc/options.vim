@@ -5,8 +5,6 @@ set fileencodings=utf-8,sjis,euc-jp,latin1
 "syntax
 syntax on
 syntax sync minlines=256
-" colorshceme
-colorscheme hybrid
 "vimscriptでマルチバイト設定。
 scriptencoding utf-8
 "クリップボードの設定
