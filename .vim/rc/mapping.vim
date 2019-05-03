@@ -36,6 +36,8 @@ nnoremap x "_x
 cnoremap <C-n> <Down>
 " <C-p>: previous history.
 cnoremap <C-p> <Up>
+" 
+cnoremap vb vert sb 
 
 " 検索後カーソル位置を中心に
 nnoremap n nzzzv
