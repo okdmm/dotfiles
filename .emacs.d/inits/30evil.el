@@ -12,7 +12,6 @@
              (setq evil-want-keybinding nil)
              :config
              (evil-mode)
-             (define-key evil-insert-state-map "jj" `evil-normal-state)
              )
 
 (use-package evil-collection
