@@ -38,3 +38,14 @@
              (evil-define-key 'operator global-map "S" 'evil-Surround-edit)
              (evil-define-key 'visual global-map "S" 'evil-surround-region)
              (evil-define-key 'visual global-map "gS" 'evil-Surround-region))
+
+(use-package evil-leader
+  :commands (evil-leader-mode)
+  :ensure evil-leader
+  :demand evil-leader
+  :init (global-evil-leader-mode)
+  :config
+  (evil-leader/set-leader "<SPC>")
+  (evil-leader/set-key
+    "w" 'save-buffer)
+  )
