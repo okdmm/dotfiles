@@ -122,6 +122,7 @@ hook_source = '''
         \   'sorted': 1,
         \   'encoding': 'euc-jp',
         \}
+  let g:eskk_keyboard_layout = 'act'
 '''
 
 [[plugins]]

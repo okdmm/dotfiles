@@ -87,8 +87,6 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PYENV_ROOT=~/.pyenv
 export PATH=$PATH:$PYENV_ROOT/bin
 export PATH="$HOME/.pyenv/shims:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 
 # cdとlsを連結

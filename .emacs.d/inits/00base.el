@@ -5,6 +5,7 @@
 (set-language-environment  'utf-8)
 (prefer-coding-system 'utf-8)
 
+
 ; 括弧を自動で補完する
 (electric-pair-mode 1)
 
@@ -14,11 +15,12 @@
 ;; デフォルトの起動時のメッセージを表示しない
 (setq inhibit-startup-message t)
 
-;; 列の番号
-(column-number-mode t)
 
 ;; 行番号の表示
-(global-linum-mode t)
+(use-package linum)
+(global-linum-mode 1)
+;; 列の番号
+(column-number-mode t)
 
 ;; 1行ごとの改ページ
 (setq scroll-conservatively 1)
@@ -27,10 +29,31 @@
 (show-paren-mode 1)
 
 ;; メニューバーの非表示
-(menu-bar-mode -1)
+(menu-bar-mode 0)
+;; disable tool-bar
+(tool-bar-mode 0)
 
 ;; auto generate file
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 (setq auto-save-list-file-prefix nil)
 (setq create-lockfiles nil)
+
+;; disable start-message
+(setq inhibit-startup-message 1)
+
+(setq initial-scratch-message "")
+
+(setq ring-bell-function 'ignore)
+
+(use-package doom-themes
+    :custom
+    (doom-themes-enable-italic t)
+    (doom-themes-enable-bold t)
+    :custom-face
+    (doom-modeline-bar ((t (:background "#6272a4"))))
+    :config
+    (load-theme 'doom-dracula t)
+    (doom-themes-neotree-config)
+    (doom-themes-org-config))
+

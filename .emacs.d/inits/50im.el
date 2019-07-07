@@ -8,7 +8,7 @@
   (skk-user-directory "~/Dropbox/myskk")
   (skk-init-file "~/Dropbox/myskk/init")
   (skk-share-private-jisho t)
-  (skk-server-host "localhost")        ; あかききゅうきゅうきゅうしょうきゅうしたきゅうそれぞれそれぞれしょうしなくてしなくてしなくてしなくてよしなくてお
+  (skk-server-host "localhost")        
   (skk-server-portnum 1178)            ;
   (skk-large-jisho "~/Dropbox/myskk/SKK-JISHO.L")
   (skk-egg-like-newline t)             ; 変換時にリターンでは改行しない
