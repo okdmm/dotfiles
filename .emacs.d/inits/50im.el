@@ -28,6 +28,7 @@
   (general-define-key :keymaps '(evil-ex-completion-map)
                       "C-j" 'skk-kakutei)
 
+  (general-set-key (kbd "C-,") 'skk-toggle-katakana)
   ;; to return skk-latin-mode when entrying/exiting from insert-state
   (add-hook 'evil-insert-state-entry-hook 'skk-latin-mode-on)
   (add-hook 'evil-insert-state-exit-hook 'skk-latin-mode-on)
