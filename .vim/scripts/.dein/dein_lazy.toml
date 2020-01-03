@@ -44,10 +44,6 @@ hook_source = '''
 
 # Rubyの自動補完
 [[plugins]]
-repo = 'Shougo/deoplete-rct'
-on_ft = ['ruby']
-
-[[plugins]]
 repo = 'tpope/vim-endwise'
 on_ft = ['ruby', 'eruby']
 
@@ -56,17 +52,12 @@ repo = 'Shougo/deoplete-clangx'
 on_ft = ['c', 'cpp']
 
 [[plugins]]
-repo = 'Shougo/neco-syntax'
-on_i = 1
-
-[[plugins]]
-repo = 'mxw/vim-jsx'
-on_ft = ['javascript', 'javascript.jsx']
-
-[[plugins]]
 repo = 'jason0x43/vim-js-indent'
-on_ft = ['javascript', 'typescript']
+on_ft = ['typescript', 'javascript']
 
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript', 'javascript']
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
@@ -108,8 +99,6 @@ hook_add = '''
   imap <C-j>     <Plug>(eskk:toggle)
   cmap <C-j>     <Plug>(eskk:toggle)
 '''
-
-
 hook_source = '''
   let g:eskk#directory = "~/.eskk"
   let g:eskk#dictionary = {

@@ -5,10 +5,8 @@ endif
 "dein
 source ~/dotfiles/.vim/scripts/dein.vim
 
-
 "option
 source ~/dotfiles/.vim/rc/options.vim
-
 
 "filetype
 source ~/dotfiles/.vim/rc/ft.vim
