@@ -59,6 +59,7 @@ zplug "b4b4r07/enhancd", use:init.sh
 zplug "b4b4r07/zsh-gomi", if:"which fzf"
 zplug "peco/peco", as:command, from:gh-r
 zplug "mollifier/anyframe"
+zplug "sindresorhus/pure"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -177,4 +178,3 @@ function peco-src() {
 }
 zle -N peco-src
 export PATH="/usr/local/opt/avr-gcc@7/bin:$PATH"
-
